@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LV4RPPOON
-{
+{ 
     abstract class RentableDecorator : IRentable
     {
         private IRentable rentable;
@@ -24,4 +24,5 @@ namespace LV4RPPOON
                 return rentable.Description;
             }
         }
-    }}
+    }
+}
