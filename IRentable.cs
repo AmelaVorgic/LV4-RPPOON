@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LV4-RPPOON
+namespace LV4RPPOON
 {
      interface IRentable
         {

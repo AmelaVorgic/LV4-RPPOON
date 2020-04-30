@@ -4,39 +4,77 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LV4-RPPOON
+namespace LV4RPPOON
 {
     class Program
-{
-    static void Main(string[] args)
     {
-        /*
-        //Zadatak 2
-        System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
-        Dataset testdataset = new Dataset("primjer.csv");
+        static void Main(string[] args)
+        {
+            /*
+            //Zadatak 2
+            System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
+            Dataset testdataset = new Dataset("primjer.csv");
 
-        Analyzer3rdParty service = new Analyzer3rdParty();
-        Adapter adapter = new Adapter(service);
+            Analyzer3rdParty service = new Analyzer3rdParty();
+            Adapter adapter = new Adapter(service);
 
-        adapter.CalculateAveragePerRow(testdataset);
-        adapter.CalculateAveragePerColumn(testdataset);
+            adapter.CalculateAveragePerRow(testdataset);
+            adapter.CalculateAveragePerColumn(testdataset);
 
-        Console.ReadKey();*/
+            Console.ReadKey();*/
 
-        //zadatak 3
-        RentingConsolePrinter Printer = new RentingConsolePrinter();
-        List<IRentable> Rented = new List<IRentable>();
-        Book RentedBook = new Book("Clean Code");
-        Video RentedVideo = new Video("Interstellar");
-        Rented.Add(RentedBook);
-        Rented.Add(RentedVideo);
+            /*
+            //zadatak 3
+            RentingConsolePrinter Printer = new RentingConsolePrinter();
+            List<IRentable> Rented = new List<IRentable>();
+            Book RentedBook = new Book("Clean Code");
+            Video RentedVideo = new Video("Interstellar");
+            Rented.Add(RentedBook);
+            Rented.Add(RentedVideo);
 
-        Printer.PrintTotalPrice(Rented);
-        Printer.DisplayItems(Rented);
+            Printer.PrintTotalPrice(Rented);
+            Printer.DisplayItems(Rented);
 
-        Console.ReadKey();
+            Console.ReadKey(); */
+
+            /*
+            //Zadatak 4
+            Book HotRentedBook = new Book("Wonder");
+            Video HotRentedVideo = new Video("The Lion King");
+            HotItem HotNewBook = new HotItem(HotRentedBook);
+            HotItem HotNewVideo = new HotItem(HotRentedVideo);
+
+            Rented.Add(HotNewBook);
+            Rented.Add(HotNewVideo);
+
+            Printer.PrintTotalPrice(Rented);
+            Printer.DisplayItems(Rented);
+
+            //Cijena najma povecala se za 1.99 za artikl koji pripada u HOT kategoriju, pored imena se ispisuje "Trending: ". Stari objekt
+            prekrili smo novim informacijama
+
+
+            Console.ReadKey(); */
+
+            /*
+            //Zadatak 5
+            List<IRentable> flashSale = new List<IRentable>();
+            DiscountedItem discountBook = new DiscountedItem(RentedBook, 20);
+            DiscountedItem discountHotBook = new DiscountedItem(HotNewBook, 35);
+            DiscountedItem discountVideo = new DiscountedItem(RentedVideo, 40);
+            DiscountedItem discountHotVideo = new DiscountedItem(HotNewVideo, 35);
+
+            flashSale.Add(discountBook);
+            flashSale.Add(discountHotBook);
+            flashSale.Add(discountVideo);
+            flashSale.Add(discountHotVideo);
+
+            Printer.PrintTotalPrice(flashSale);
+            Printer.DisplayItems(flashSale);
+
+            Console.ReadKey(); */
+        }
     }
-}
 }
 
 /* primjer.csv

@@ -4,50 +4,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LV4-RPPOON
-{  
-    class Dataset
+namespace LV4RPPOON
 {
-    private List<List<string>> data;
-
-    public Dataset()
+    class Dataset
     {
-        this.data = new List<List<string>>();
-    }
+        private List<List<string>> data;
 
-    public Dataset(string filePath) : this()
-    {
-        this.LoadDataFromCSV(filePath);
-    }
-
-    public void LoadDataFromCSV(string filePath)
-    {
-        using (System.IO.StreamReader reader = new System.IO.StreamReader(filePath))
+        public Dataset()
         {
-            string line;
-            while ((line = reader.ReadLine()) != null)
+            this.data = new List<List<string>>();
+        }
+
+        public Dataset(string filePath) : this()
+        {
+            this.LoadDataFromCSV(filePath);
+        }
+
+        public void LoadDataFromCSV(string filePath)
+        {
+            using (System.IO.StreamReader reader = new System.IO.StreamReader(filePath))
             {
-                List<string> row = new List<string>();
-                string[] items = line.Split(',');
-
-                foreach (string item in items)
+                string line;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    row.Add(item);
-                }
+                    List<string> row = new List<string>();
+                    string[] items = line.Split(',');
 
-                this.data.Add(row);
+                    foreach (string item in items)
+                    {
+                        row.Add(item);
+                    }
+
+                    this.data.Add(row);
+                }
             }
         }
-    }
-    public IList<List<string>> GetData()
-    {
-        return new System.Collections.ObjectModel.ReadOnlyCollection<List<string>>(data);
-    }
+        public IList<List<string>> GetData()
+        {
+            return new System.Collections.ObjectModel.ReadOnlyCollection<List<string>>(data);
+        }
 
-    public void ClearData()
-    {
-        this.data.Clear();
-    }
+        public void ClearData()
+        {
+            this.data.Clear();
+        }
 
-}
+    }
 }
