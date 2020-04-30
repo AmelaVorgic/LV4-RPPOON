@@ -11,4 +11,4 @@ namespace LV4RPPOON
         double[] CalculateAveragePerColumn(Dataset dataset);
         double[] CalculateAveragePerRow(Dataset dataset);
     }
-}
+} 
