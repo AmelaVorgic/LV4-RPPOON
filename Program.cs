@@ -11,7 +11,7 @@ namespace LV4RPPOON
         static void Main(string[] args)
         {
             /*
-            //Zadatak 2
+            //Zadatak 2 
             System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
             Dataset testdataset = new Dataset("primjer.csv");
 
