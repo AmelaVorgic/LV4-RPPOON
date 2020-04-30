@@ -21,7 +21,7 @@ namespace LV4RPPOON
             adapter.CalculateAveragePerRow(testdataset);
             adapter.CalculateAveragePerColumn(testdataset);
 
-            Console.ReadKey();*/
+            Console.ReadKey();*/ 
 
             /*
             //zadatak 3
