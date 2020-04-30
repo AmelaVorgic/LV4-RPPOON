@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace LV4RPPOON
 {
     class EmailValidator : IEmailValidatorService
-    {
+    { 
         public int MinLength { get; private set; }
         public EmailValidator(int minLength)
         {
