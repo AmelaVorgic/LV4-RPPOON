@@ -10,6 +10,8 @@ namespace LV4-RPPOON
 {
     static void Main(string[] args)
     {
+        /*
+        //Zadatak 2
         System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
         Dataset testdataset = new Dataset("primjer.csv");
 
@@ -18,6 +20,19 @@ namespace LV4-RPPOON
 
         adapter.CalculateAveragePerRow(testdataset);
         adapter.CalculateAveragePerColumn(testdataset);
+
+        Console.ReadKey();*/
+
+        //zadatak 3
+        RentingConsolePrinter Printer = new RentingConsolePrinter();
+        List<IRentable> Rented = new List<IRentable>();
+        Book RentedBook = new Book("Clean Code");
+        Video RentedVideo = new Video("Interstellar");
+        Rented.Add(RentedBook);
+        Rented.Add(RentedVideo);
+
+        Printer.PrintTotalPrice(Rented);
+        Printer.DisplayItems(Rented);
 
         Console.ReadKey();
     }
