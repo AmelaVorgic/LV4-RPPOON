@@ -73,6 +73,39 @@ namespace LV4RPPOON
             Printer.DisplayItems(flashSale);
 
             Console.ReadKey(); */
+
+            //Zadatak 6
+            EmailValidator emailValidator = new EmailValidator(8);
+            PasswordValidator passwordValidator = new PasswordValidator(8);
+            List<string> emails = new List<string>();
+            List<string> passwords = new List<string>();
+
+            string mail1 = "amelavorgic@gmail.com";
+            string mail2 = "amelavorgic.com";
+            string mail3 = "amela.vorgic@student.ferit.eu";
+
+            string password1 = "12345678";
+            string password2 = "jedan2tritri";
+            string password3 = "NemaLozinke01";
+
+            emails.Add(mail1);
+            emails.Add(mail2);
+            emails.Add(mail3);
+            passwords.Add(password1);
+            passwords.Add(password2);
+            passwords.Add(password3);
+
+            foreach (string email in emailList)
+            {
+                Console.WriteLine(emailValidator.IsValidAddress(email));
+            }
+            Console.ReadKey();
+
+            foreach (string password in passwords)
+            {
+                Console.WriteLine(passwordValidator.IsValidPassword(password));
+            }
+            Console.ReadKey();
         }
     }
 }
